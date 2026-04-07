@@ -1,5 +1,6 @@
 aid: american-airlines
-url: https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/apis.yml
 apis:
   - aid: american-airlines:runway-developer-api
     name: American Airlines Runway Developer API
@@ -8,7 +9,8 @@ apis:
       - Travel
       - Flights
       - Aviation
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developer.aa.com
     humanURL: https://developer.aa.com/
     properties:
@@ -21,3 +23,7 @@ apis:
       APIs for flight operations, booking, and travel services. The platform
       includes built-in API management capabilities and serves as the central
       hub for American Airlines API integrations.
+description: >-
+  American Airlines is a major U.S. airline providing scheduled passenger and cargo
+  service to destinations throughout North America, the Caribbean, Latin America,
+  Europe, and Asia.
