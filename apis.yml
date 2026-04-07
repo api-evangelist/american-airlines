@@ -1,16 +1,14 @@
 aid: american-airlines
-url: 
-  https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/apis.yml
 apis:
   - aid: american-airlines:runway-developer-api
     name: American Airlines Runway Developer API
     tags:
       - Airlines
-      - Travel
-      - Flights
       - Aviation
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Flights
+      - Travel
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developer.aa.com
     humanURL: https://developer.aa.com/
     properties:

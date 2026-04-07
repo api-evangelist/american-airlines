@@ -101,10 +101,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Booking'
 tags:
-  - name: Flights
-    description: Flight information and status operations
   - name: Bookings
     description: Booking management operations
+  - name: Flights
+    description: Flight information and status operations
 components:
   schemas:
     Flight:
