@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/json-structure/runway-developer-api-flight-list-structure.json",
+  "name": "FlightList",
+  "description": "FlightList schema",
+  "type": "object",
+  "properties": {
+    "flights": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Flight"
+      }
+    }
+  }
+}

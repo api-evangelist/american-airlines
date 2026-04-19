@@ -1,0 +1,63 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aa": "https://aa.com/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "FlightStatus": "aa:FlightStatus",
+    "flightId": {
+      "@id": "aa:flightId",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "aa:status",
+      "@type": "xsd:string"
+    },
+    "gate": {
+      "@id": "aa:gate",
+      "@type": "xsd:string"
+    },
+    "delay": {
+      "@id": "aa:delay",
+      "@type": "xsd:integer"
+    },
+    "Flight": "aa:Flight",
+    "id": {
+      "@id": "aa:id",
+      "@type": "xsd:string"
+    },
+    "flightNumber": {
+      "@id": "aa:flightNumber",
+      "@type": "xsd:string"
+    },
+    "origin": {
+      "@id": "aa:origin",
+      "@type": "xsd:string"
+    },
+    "destination": {
+      "@id": "aa:destination",
+      "@type": "xsd:string"
+    },
+    "departureTime": {
+      "@id": "aa:departureTime",
+      "@type": "xsd:dateTime"
+    },
+    "arrivalTime": {
+      "@id": "aa:arrivalTime",
+      "@type": "xsd:dateTime"
+    },
+    "FlightList": "aa:FlightList",
+    "flights": {
+      "@id": "aa:flights",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "BookingRequest": "aa:BookingRequest",
+    "passengers": {
+      "@id": "aa:passengers",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "Booking": "aa:Booking"
+  }
+}

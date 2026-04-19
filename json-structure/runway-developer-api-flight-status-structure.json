@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/json-structure/runway-developer-api-flight-status-structure.json",
+  "name": "FlightStatus",
+  "description": "FlightStatus schema",
+  "type": "object",
+  "properties": {
+    "flightId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "gate": {
+      "type": "string"
+    },
+    "delay": {
+      "type": "int32"
+    }
+  }
+}

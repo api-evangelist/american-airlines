@@ -1,0 +1,117 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: American Airlines
+  description: Vocabulary mapping operational and capability dimensions for American Airlines Runway APIs.
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: aa-runway
+      name: American Airlines Runway Developer API
+      version: "1.0.0"
+      baseUrl: https://developer.aa.com/api
+      status: active
+
+  resources:
+    - name: flights
+      apis: [aa-runway]
+      actions: [search, get-status, get-details]
+    - name: bookings
+      apis: [aa-runway]
+      actions: [create, get, cancel]
+    - name: passengers
+      apis: [aa-runway]
+      actions: [get, update]
+
+  actions:
+    - name: search
+      httpMethod: GET
+      pattern: query
+    - name: get-status
+      httpMethod: GET
+      pattern: read
+    - name: get-details
+      httpMethod: GET
+      pattern: read
+    - name: create
+      httpMethod: POST
+      pattern: write
+    - name: cancel
+      httpMethod: DELETE
+      pattern: destructive
+
+  schemas:
+    core:
+      - name: Flight
+        keyProperties: [flightId, flightNumber, origin, destination, departureTime, status]
+      - name: FlightStatus
+        keyProperties: [flightId, status, departureTime, arrivalTime, gate]
+
+  parameters:
+    filters:
+      - name: origin
+        description: Origin airport IATA code
+      - name: destination
+        description: Destination airport IATA code
+    time:
+      - name: date
+        description: Travel date in YYYY-MM-DD format
+    identifiers:
+      - name: flightId
+        description: Unique flight identifier
+
+  enums:
+    flight-status: [On Time, Delayed, Cancelled, Boarding, Departed, Arrived]
+
+  authentication:
+    schemes:
+      - type: apiKey
+        description: API key header authentication via Runway platform
+
+capability:
+  workflows:
+    - name: Flight Operations
+      file: capabilities/flight-operations.yaml
+      description: Travel app workflow for searching and tracking American Airlines flights
+      apisCombined: [aa-runway]
+      toolCount: 2
+      personas:
+        - Travel Technology Developer
+        - Booking Agent
+
+  personas:
+    - id: travel-tech-developer
+      name: Travel Technology Developer
+      description: Builds travel apps integrating American Airlines flight data
+      workflows: [Flight Operations]
+    - id: booking-agent
+      name: Booking Agent
+      description: Uses flight data to assist customers with bookings
+      workflows: [Flight Operations]
+
+  domains:
+    - name: Flight Operations
+      resources: [flights]
+    - name: Booking
+      resources: [bookings, passengers]
+
+  namespaces:
+    consumed: [aa-runway]
+    restExposed:
+      - name: aa-flight-ops-api
+        port: 8080
+    mcpExposed:
+      - name: aa-flight-ops-mcp
+        port: 9090
+
+  binds:
+    - name: AA_API_KEY
+      workflows: [Flight Operations]
+
+crossReference:
+  - resource: flights
+    operations: [getFlights, getFlightStatus]
+    workflows: [Flight Operations]
+    personas: [Travel Technology Developer, Booking Agent]

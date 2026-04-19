@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/json-structure/runway-developer-api-flight-structure.json",
+  "name": "Flight",
+  "description": "Flight schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "flightNumber": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "departureTime": {
+      "type": "datetime"
+    },
+    "arrivalTime": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

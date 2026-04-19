@@ -1,0 +1,9 @@
+{
+  "id": "AA3701",
+  "flightNumber": "AA576",
+  "origin": "ORD",
+  "destination": "JFK",
+  "departureTime": "2026-04-19T14:30:00Z",
+  "arrivalTime": "2026-04-19T14:30:00Z",
+  "status": "On Time"
+}
