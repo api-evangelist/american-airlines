@@ -1,0 +1,126 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: American Airlines Runway Developer API — Flights
+  description: 'American Airlines Runway Developer API — Flights. 2 operations. Lead operation: Get Flights. Self-contained
+    Naftiko capability covering one American Airlines business surface.'
+  tags:
+  - American Airlines
+  - Flights
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMERICAN_AIRLINES_API_KEY: AMERICAN_AIRLINES_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: runway-developer-flights
+    baseUri: https://developer.aa.com/api
+    description: American Airlines Runway Developer API — Flights business capability. Self-contained, no shared references.
+    resources:
+    - name: flights
+      path: /flights
+      operations:
+      - name: getflights
+        method: GET
+        description: Get Flights
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: origin
+          in: query
+          type: string
+        - name: destination
+          in: query
+          type: string
+        - name: date
+          in: query
+          type: string
+    - name: flights-flightId-status
+      path: /flights/{flightId}/status
+      operations:
+      - name: getflightstatus
+        method: GET
+        description: Get Flight Status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: flightId
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: runway-developer-flights-rest
+    port: 8080
+    description: REST adapter for American Airlines Runway Developer API — Flights. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/flights
+      name: flights
+      description: REST surface for flights.
+      operations:
+      - method: GET
+        name: getflights
+        description: Get Flights
+        call: runway-developer-flights.getflights
+        with:
+          origin: rest.origin
+          destination: rest.destination
+          date: rest.date
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/flights/{flightid}/status
+      name: flights-flightid-status
+      description: REST surface for flights-flightId-status.
+      operations:
+      - method: GET
+        name: getflightstatus
+        description: Get Flight Status
+        call: runway-developer-flights.getflightstatus
+        with:
+          flightId: rest.flightId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: runway-developer-flights-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for American Airlines Runway Developer API — Flights. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: get-flights
+      description: Get Flights
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: runway-developer-flights.getflights
+      with:
+        origin: tools.origin
+        destination: tools.destination
+        date: tools.date
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-flight-status
+      description: Get Flight Status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: runway-developer-flights.getflightstatus
+      with:
+        flightId: tools.flightId
+      outputParameters:
+      - type: object
+        mapping: $.
