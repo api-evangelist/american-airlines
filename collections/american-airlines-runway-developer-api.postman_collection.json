@@ -1,0 +1,411 @@
+{
+  "item": [
+    {
+      "id": "b0e53df6-3f6b-4821-8683-c04e0df76be0",
+      "name": "Bookings",
+      "description": {
+        "content": "Booking management operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "11b8bc16-0ba5-43a2-9188-088f9d0370d3",
+          "name": "Create Booking",
+          "request": {
+            "name": "Create Booking",
+            "description": {
+              "content": "Create a new flight booking.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bookings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"flightId\": \"<string>\",\n  \"passengers\": [\n    {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\"\n    },\n    {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "42ebfde0-3c21-4950-83c9-e55229b5a4ac",
+              "name": "Booking created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"flightId\": \"<string>\",\n  \"passengers\": [\n    {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\"\n    },\n    {\n      \"firstName\": \"<string>\",\n      \"lastName\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"flightId\": \"string\",\n  \"passengers\": [\n    {\n      \"name\": \"string\",\n      \"seatNumber\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"seatNumber\": \"string\"\n    }\n  ],\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e3355169-83b9-4c38-8b5f-f23840581bfc",
+          "name": "Get Booking",
+          "request": {
+            "name": "Get Booking",
+            "description": {
+              "content": "Retrieve a specific booking.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bookings",
+                ":bookingId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "bookingId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e179e29e-0c8c-40c3-83a4-6d28a975919f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bookings",
+                    ":bookingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "bookingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"flightId\": \"string\",\n  \"passengers\": [\n    {\n      \"name\": \"string\",\n      \"seatNumber\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"seatNumber\": \"string\"\n    }\n  ],\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8cf3d03c-f1b0-4b23-b938-752de01c27e7",
+      "name": "Flights",
+      "description": {
+        "content": "Flight information and status operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7e095d99-f941-4506-a831-ea37f97e0a39",
+          "name": "Get Flights",
+          "request": {
+            "name": "Get Flights",
+            "description": {
+              "content": "Retrieve flight information and schedules.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "flights"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "origin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "destination",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "34895d54-536d-456c-9d76-cc0539b92514",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "flights"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "origin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "destination",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"flights\": [\n    {\n      \"id\": \"string\",\n      \"flightNumber\": \"string\",\n      \"origin\": \"string\",\n      \"destination\": \"string\",\n      \"departureTime\": \"1955-06-09T16:02:01.691Z\",\n      \"arrivalTime\": \"1958-06-21T08:51:56.885Z\",\n      \"status\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"flightNumber\": \"string\",\n      \"origin\": \"string\",\n      \"destination\": \"string\",\n      \"departureTime\": \"2002-06-18T05:55:58.961Z\",\n      \"arrivalTime\": \"2007-03-31T06:54:19.353Z\",\n      \"status\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e744f67d-33ad-4db3-adff-64ae72d15c33",
+          "name": "Get Flight Status",
+          "request": {
+            "name": "Get Flight Status",
+            "description": {
+              "content": "Retrieve the status of a specific flight.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "flights",
+                ":flightId",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "flightId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8067b60-d856-428e-9fc6-fd3fc894687c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "flights",
+                    ":flightId",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "flightId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"flightId\": \"string\",\n  \"status\": \"string\",\n  \"gate\": \"string\",\n  \"delay\": 9343\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developer.aa.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2480203d-f612-4266-9bd6-f3a761eb68f6",
+    "name": "American Airlines Runway Developer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The American Airlines Runway Developer API provides access to flight operations, booking, scheduling, and travel services data.\n\nContact Support:\n Name: American Airlines",
+      "type": "text/plain"
+    }
+  }
+}
