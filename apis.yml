@@ -7,7 +7,7 @@ description: American Airlines is one of the world's largest airlines, operating
   status, and booking capabilities through its developer portal, and maintains an
   active open-source presence via the AmericanAirlines GitHub organization.
 type: Index
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Airlines
 - Aviation
