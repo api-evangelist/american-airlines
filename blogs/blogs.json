@@ -2,11 +2,13 @@
   "repo": "american-airlines",
   "feeds": [
     {
-      "source": "https://tech.aa.com/",
+      "source": "https://github.com/AmericanAirlines",
+      "feed_url": "https://github.com/AmericanAirlines",
+      "title": "",
       "saved": 0,
-      "error": "DNS resolution failed (ENOTFOUND tech.aa.com)"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:21:11Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
