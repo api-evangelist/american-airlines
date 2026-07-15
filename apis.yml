@@ -44,6 +44,8 @@ apis:
   - url: graphql/american-airlines-graphql.md
     type: GraphQL
 common:
+- type: AgenticAccess
+  url: agentic-access/american-airlines-agentic-access.yml
 - type: DomainSecurity
   url: security/american-airlines-domain-security.yml
 - type: LinkedIn
