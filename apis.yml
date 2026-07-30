@@ -7,7 +7,19 @@ description: American Airlines is one of the world's largest airlines, operating
   status, and booking capabilities through its developer portal, and maintains an
   active open-source presence via the AmericanAirlines GitHub organization.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/american-airlines.png
 tags:
 - Airlines
 - Aviation
@@ -21,28 +33,34 @@ created: '2026-04-19'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-- aid: american-airlines:runway-developer-api
-  name: American Airlines Runway Developer API
-  description: Runway is American Airlines' developer experience platform providing
-    APIs for flight operations, booking, scheduling, and travel services. Built on
-    Spotify's Backstage platform, Runway serves as the central hub for American Airlines
-    API integrations with built-in API management, security, and authentication capabilities.
-    Teams can deploy running apps with public ingress in under six minutes.
+- aid: american-airlines:american-airlines-bookings-api
+  name: American Airlines Bookings API
+  description: Booking management operations
   humanURL: https://developer.aa.com/
   baseURL: https://developer.aa.com/api
   tags:
-  - Airlines
-  - Aviation
-  - Flights
-  - Travel
-  - Booking
+  - Bookings
   properties:
+  - type: OpenAPI
+    url: openapi/american-airlines-bookings-api-openapi.yml
   - type: Documentation
     url: https://developer.aa.com/
+  - type: GraphQL
+    url: graphql/american-airlines-graphql.md
+- aid: american-airlines:american-airlines-flights-api
+  name: American Airlines Flights API
+  description: Flight information and status operations
+  humanURL: https://developer.aa.com/
+  baseURL: https://developer.aa.com/api
+  tags:
+  - Flights
+  properties:
   - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/openapi/american-airlines-runway-developer-api-openapi.yml
-  - url: graphql/american-airlines-graphql.md
-    type: GraphQL
+    url: openapi/american-airlines-flights-api-openapi.yml
+  - type: Documentation
+    url: https://developer.aa.com/
+  - type: GraphQL
+    url: graphql/american-airlines-graphql.md
 common:
 - type: AgenticAccess
   url: agentic-access/american-airlines-agentic-access.yml
