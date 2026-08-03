@@ -1,0 +1,178 @@
+openapi: 3.1.0
+info:
+  title: American Airlines Runway Developer API
+  description: >-
+    The American Airlines Runway Developer API provides access to flight
+    operations, booking, scheduling, and travel services data.
+  version: 1.0.0
+  contact:
+    name: American Airlines
+    url: https://developer.aa.com/
+servers:
+  - url: https://developer.aa.com/api
+    description: Production
+paths:
+  /flights:
+    get:
+      operationId: getFlights
+      summary: Get Flights
+      description: Retrieve flight information and schedules.
+      tags:
+        - Flights
+      parameters:
+        - name: origin
+          in: query
+          schema:
+            type: string
+        - name: destination
+          in: query
+          schema:
+            type: string
+        - name: date
+          in: query
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlightList'
+  /flights/{flightId}/status:
+    get:
+      operationId: getFlightStatus
+      summary: Get Flight Status
+      description: Retrieve the status of a specific flight.
+      tags:
+        - Flights
+      parameters:
+        - name: flightId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlightStatus'
+  /bookings:
+    post:
+      operationId: createBooking
+      summary: Create Booking
+      description: Create a new flight booking.
+      tags:
+        - Bookings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingRequest'
+      responses:
+        '201':
+          description: Booking created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+  /bookings/{bookingId}:
+    get:
+      operationId: getBooking
+      summary: Get Booking
+      description: Retrieve a specific booking.
+      tags:
+        - Bookings
+      parameters:
+        - name: bookingId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+tags:
+  - name: Bookings
+    description: Booking management operations
+  - name: Flights
+    description: Flight information and status operations
+components:
+  schemas:
+    Flight:
+      type: object
+      properties:
+        id:
+          type: string
+        flightNumber:
+          type: string
+        origin:
+          type: string
+        destination:
+          type: string
+        departureTime:
+          type: string
+          format: date-time
+        arrivalTime:
+          type: string
+          format: date-time
+        status:
+          type: string
+    FlightList:
+      type: object
+      properties:
+        flights:
+          type: array
+          items:
+            $ref: '#/components/schemas/Flight'
+    FlightStatus:
+      type: object
+      properties:
+        flightId:
+          type: string
+        status:
+          type: string
+        gate:
+          type: string
+        delay:
+          type: integer
+    Booking:
+      type: object
+      properties:
+        id:
+          type: string
+        flightId:
+          type: string
+        passengers:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              seatNumber:
+                type: string
+        status:
+          type: string
+    BookingRequest:
+      type: object
+      properties:
+        flightId:
+          type: string
+        passengers:
+          type: array
+          items:
+            type: object
+            properties:
+              firstName:
+                type: string
+              lastName:
+                type: string

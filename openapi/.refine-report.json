@@ -1,0 +1,16 @@
+{
+  "provider": "american-airlines",
+  "sources": [
+    "american-airlines-bookings-api-openapi.yml",
+    "american-airlines-flights-api-openapi.yml"
+  ],
+  "outputs": [
+    "american-airlines-bookings-api-openapi.yml",
+    "american-airlines-flights-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
