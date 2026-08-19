@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "American Airlines Runway Developer Bookings API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Bookings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Booking",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://developer.aa.com/api/bookings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new flight booking."
+        },
+        {
+          "info": {
+            "name": "Get Booking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.aa.com/api/bookings/:bookingId",
+            "params": [
+              {
+                "name": "bookingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific booking."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "American Airlines Runway Developer Bookings Flights API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Flights",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Flights",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.aa.com/api/flights",
+            "params": [
+              {
+                "name": "origin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "destination",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve flight information and schedules."
+        },
+        {
+          "info": {
+            "name": "Get Flight Status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.aa.com/api/flights/:flightId/status",
+            "params": [
+              {
+                "name": "flightId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve the status of a specific flight."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
