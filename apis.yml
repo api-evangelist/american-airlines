@@ -7,6 +7,19 @@ description: American Airlines is one of the world's largest airlines, operating
   status, and booking capabilities through its developer portal, and maintains an
   active open-source presence via the AmericanAirlines GitHub organization.
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: Apache-2.0
+  open_source: true
+  commercial: false
+  callable_host: true
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
