@@ -52,6 +52,8 @@ apis:
   humanURL: https://developer.aa.com/
   baseURL: https://developer.aa.com/api
   tags:
+  - Booking
+  tags_raw:
   - Bookings
   properties:
   - type: OpenAPI
