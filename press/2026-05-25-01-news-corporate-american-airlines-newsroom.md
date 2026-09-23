@@ -1,7 +1,9 @@
 ---
 title: News - Corporate - American Airlines Newsroom
 url: https://news.aa.com/news/corporate/2025/default.aspx
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Airlines Group" press release artificial intelligence'
 position: 1
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: How American Airlines Uses AI to Strengthen Human ...
 url: https://adchatdfw.com/how-american-airlines-uses-ai-to-strengthen-human-decision-making/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Airlines Group" press release artificial intelligence'
 position: 3
 source: serpapi-google
