@@ -60,8 +60,6 @@ apis:
     url: openapi/american-airlines-bookings-api-openapi.yml
   - type: Documentation
     url: https://developer.aa.com/
-  - type: GraphQL
-    url: graphql/american-airlines-graphql.md
 - aid: american-airlines:american-airlines-flights-api
   name: American Airlines Flights API
   description: Flight information and status operations
@@ -74,8 +72,6 @@ apis:
     url: openapi/american-airlines-flights-api-openapi.yml
   - type: Documentation
     url: https://developer.aa.com/
-  - type: GraphQL
-    url: graphql/american-airlines-graphql.md
 common:
 - type: CapabilityMap
   url: capabilities/american-airlines-capability-edges.yml
