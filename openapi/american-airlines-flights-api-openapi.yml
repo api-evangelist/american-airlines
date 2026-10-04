@@ -63,6 +63,24 @@ paths:
                 $ref: '#/components/schemas/FlightStatus'
 components:
   schemas:
+    FlightList:
+      type: object
+      properties:
+        flights:
+          type: array
+          items:
+            $ref: '#/components/schemas/Flight'
+    FlightStatus:
+      type: object
+      properties:
+        flightId:
+          type: string
+        status:
+          type: string
+        gate:
+          type: string
+        delay:
+          type: integer
     Flight:
       type: object
       properties:
@@ -82,21 +100,3 @@ components:
           format: date-time
         status:
           type: string
-    FlightList:
-      type: object
-      properties:
-        flights:
-          type: array
-          items:
-            $ref: '#/components/schemas/Flight'
-    FlightStatus:
-      type: object
-      properties:
-        flightId:
-          type: string
-        status:
-          type: string
-        gate:
-          type: string
-        delay:
-          type: integer

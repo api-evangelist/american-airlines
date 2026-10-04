@@ -55,20 +55,6 @@ paths:
                 $ref: '#/components/schemas/Booking'
 components:
   schemas:
-    BookingRequest:
-      type: object
-      properties:
-        flightId:
-          type: string
-        passengers:
-          type: array
-          items:
-            type: object
-            properties:
-              firstName:
-                type: string
-              lastName:
-                type: string
     Booking:
       type: object
       properties:
@@ -87,3 +73,17 @@ components:
                 type: string
         status:
           type: string
+    BookingRequest:
+      type: object
+      properties:
+        flightId:
+          type: string
+        passengers:
+          type: array
+          items:
+            type: object
+            properties:
+              firstName:
+                type: string
+              lastName:
+                type: string
