@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "american-airlines",
+    "captured_at": "2026-10-11T141618",
+    "source_url": "https://aa.com",
+    "source_type": "root-domain",
+    "file": "american-airlines-2026-10-11T141618.png",
+    "bytes": 24784,
+    "capture": "playwright-local"
+  }
+]
