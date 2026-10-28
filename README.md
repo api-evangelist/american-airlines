@@ -1,4 +1,4 @@
-# American Airlines (american-airlines)
+# American Airlines
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,171 @@
 
 American Airlines is one of the world's largest airlines, operating an extensive domestic and international route network. The company's Runway developer experience platform, built on Spotify's Backstage, provides internal developer tooling and API management for engineering teams. American Airlines exposes flight data, status, and booking capabilities through its developer portal, and maintains an active open-source presence via the AmericanAirlines GitHub organization.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/apis.yml)
+**Areas:** Airlines · Aviation · Flights · Travel · Booking · Developer Experience · Fortune 100
 
-## Scope
+## American Airlines on APIs.io
 
-- **Type:** Index
+Everything profiled for American Airlines is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/american-airlines/](https://apis.io/providers/american-airlines/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- Airlines
-- Aviation
-- Flights
-- Travel
-- Booking
-- Developer Experience
+- [American Airlines Bookings API](https://apis.io/apis/american-airlines/american-airlines-bookings-api/) — Booking management operations
+- [American Airlines Flights API](https://apis.io/apis/american-airlines/american-airlines-flights-api/) — Flight information and status operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-04-19
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### GraphQL (1)
 
-### American Airlines Runway Developer API
+GraphQL schemas.
 
-Runway is American Airlines' developer experience platform providing APIs for flight operations, booking, scheduling, and travel services. Built on Spotify's Backstage platform, Runway serves as the central hub for American Airlines API integrations with built-in API management, security, and authentication capabilities. Teams can deploy running apps with public ingress in under six minutes.
+- [Moved to /providers/american-airlines/](https://apis.io/graphqls/american-airlines/american-airlines-graphql/)
 
-- **Human URL:** [https://developer.aa.com/](https://developer.aa.com/)
-- **Base URL:** `https://developer.aa.com/api`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Airlines
-- Aviation
-- Flights
-- Travel
-- Booking
+- [American Airlines Agentic Access](https://apis.io/agentic-access/american-airlines/american-airlines-agentic-access/)
 
-#### Properties
+#### JSON Schema (5)
 
-- [Documentation](https://developer.aa.com/)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/american-airlines/refs/heads/main/openapi/american-airlines-runway-developer-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/american-airlines-runway-developer-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/american-airlines-runway-developer-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+The data models the API reads and writes.
 
-## Common Properties
+- [Booking](https://apis.io/schemas/american-airlines/runway-developer-api-booking/)
+- [BookingRequest](https://apis.io/schemas/american-airlines/runway-developer-api-booking-request/)
+- [Flight](https://apis.io/schemas/american-airlines/runway-developer-api-flight/)
+- [FlightList](https://apis.io/schemas/american-airlines/runway-developer-api-flight-list/)
+- [FlightStatus](https://apis.io/schemas/american-airlines/runway-developer-api-flight-status/)
 
-- [LinkedIn](https://www.linkedin.com/company/american-airlines)
+#### JSON Structure (5)
+
+Data models expressed in JSON Structure.
+
+- [Runway Developer Api Booking Request Structure](https://apis.io/json-structure/american-airlines/runway-developer-api-booking-request-structure/)
+- [Runway Developer Api Booking Structure](https://apis.io/json-structure/american-airlines/runway-developer-api-booking-structure/)
+- [Runway Developer Api Flight List Structure](https://apis.io/json-structure/american-airlines/runway-developer-api-flight-list-structure/)
+- [Runway Developer Api Flight Status Structure](https://apis.io/json-structure/american-airlines/runway-developer-api-flight-status-structure/)
+- [Runway Developer Api Flight Structure](https://apis.io/json-structure/american-airlines/runway-developer-api-flight-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [American Airlines Runway Context](https://apis.io/jsonld/american-airlines/american-airlines-runway-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [American Airlines Vocabulary](https://apis.io/vocabularies/american-airlines/american-airlines-vocabulary/)
+
+#### Examples (5)
+
+Example requests and responses.
+
+- [Runway Developer Api Booking Example](https://apis.io/examples/american-airlines/runway-developer-api-booking-example/)
+- [Runway Developer Api Booking Request Example](https://apis.io/examples/american-airlines/runway-developer-api-booking-request-example/)
+- [Runway Developer Api Flight Example](https://apis.io/examples/american-airlines/runway-developer-api-flight-example/)
+- [Runway Developer Api Flight List Example](https://apis.io/examples/american-airlines/runway-developer-api-flight-list-example/)
+- [Runway Developer Api Flight Status Example](https://apis.io/examples/american-airlines/runway-developer-api-flight-status-example/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [American Airlines Runway Developer Bookings API](https://apis.io/collections/american-airlines/open-american-airlines-bookings-api/)
+- [American Airlines Runway Developer Bookings Flights API](https://apis.io/collections/american-airlines/open-american-airlines-flights-api/)
+- [American Airlines Runway Developer API](https://apis.io/collections/american-airlines/open-american-airlines-runway-developer-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [American Airlines — jsonschema rules](https://apis.io/rules/american-airlines/american-airlines-jsonschema-spectral-rules/)
+- [American Airlines API Rules](https://apis.io/rules/american-airlines/american-airlines-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [American Airlines Domain Security](https://apis.io/security/american-airlines/american-airlines-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [American Airlines Plans Pricing](https://apis.io/plans/american-airlines/american-airlines-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [American Airlines Rate Limits](https://apis.io/rate-limits/american-airlines/american-airlines-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [American Airlines Finops](https://apis.io/finops/american-airlines/american-airlines-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.aa.com/)
-- [Developer Portal](https://developer.aa.com/)
-- [GitHub Organization](https://github.com/AmericanAirlines)
 - [Blog](https://tech.aa.com/)
-- [GitHub Repository](https://github.com/AmericanAirlines/backstage)
-- [Tools](https://github.com/AmericanAirlines/Flight-Engine)
-- [Tools](https://github.com/AmericanAirlines/Hangar)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [GitHub](https://github.com/AmericanAirlines)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 26.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 52.2 |
+| Contract governance | 13.6 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 20.2 |
+| Access clarity | 5.3 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/american-airlines/](https://apis.io/providers/american-airlines/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for American Airlines: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/american-airlines/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
