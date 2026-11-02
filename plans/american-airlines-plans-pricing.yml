@@ -1,0 +1,65 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: American Airlines
+providerId: american-airlines
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Airlines
+  - Aviation
+  - Flights
+  - Travel
+  - Booking
+  - Developer Experience
+description: >-
+  American Airlines' Runway platform is internal developer infrastructure rather than a public commercial API. Travel-distribution integrations are intermediated through GDS partners (Sabre, Amadeus, Travelport) and corporate / NDC channels under bilateral agreements with no public price list. Reconcile if a public API tier is launched.
+notes: >-
+  American Airlines' Runway platform (built on Spotify Backstage) is American Airlines' internal developer experience for engineering teams - not a publicly consumable, priced API. External flight data, booking, and status integrations are delivered through GDS partners (Sabre, Amadeus) and corporate / NDC channels under bilateral agreements. No public price list or rate-limit documentation is published. Reconcile if a public API tier emerges.
+sources:
+  - https://developer.aa.com/
+  - https://github.com/AmericanAirlines
+plans:
+  - id: american-airlines-overview
+    name: American Airlines - Pricing Overview
+    type: enterprise
+    description: >-
+      Placeholder plan reflecting that American Airlines does not publish a public,
+      machine-readable API price list. Pricing is bespoke per engagement.
+    entries:
+      - label: API Access
+        name: api_access
+        type: flat
+        metric: varies
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: Negotiated Access
+      - name: Bilateral Agreement
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: American Airlines - Pricing Overview
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - per-use
